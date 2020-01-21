@@ -25,6 +25,5 @@ In RuntimePolymorphism.java, we see an example with three Child classes implemen
 
 ## Abstraction
 
-In Abstraction.java, methods square, sqrt and pythagoras have been defined. The implementation of pythagoras depends on the methods square and sqrt, but we do not need to know the exact implementations of either of the methods to code the Pythagoras method. Thus, this is an example of Abstraction.
-
+In Abstraction.java, an abstract class Shape has been defined, with an unimplemented area() method. This area method is then overridden by each of the children of the abstract class Shape, which provide their own implementations of the area() method. Since we do not need to know how each Shape's area is calculated specifically when declaring the object and calling the method, this qualifies as abstraction.
 

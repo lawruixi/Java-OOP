@@ -1,15 +1,35 @@
 import java.lang.Math;
 public class Abstraction{
-    static double square(double x){
-        return x * x;
-    }
-    static double sqrt(double x){
-        return Math.sqrt(x);
-    }
-    static double pythagoras(double a, double b){
-        return sqrt(square(a) + square(b));
-    }
     public static void main(String[] args){
-        System.out.println(pythagoras(3, 4));
+        Shape s1 = new Circle(10);
+        Shape s2 = new Rectangle(10, 10);
+
+        System.out.println(s1.area());
+        System.out.println(s2.area());
+    }
+}
+
+abstract class Shape{
+    abstract double area();
+}
+
+class Circle extends Shape{
+    int radius;
+    Circle(int radius){
+        this.radius = radius;
+    }
+    double area(){
+        return 3.14159*radius*radius;
+    }
+}
+
+class Rectangle extends Shape{
+    int width, breadth;
+    Rectangle(int width, int breadth){
+        this.width = width;
+        this.breadth = breadth;
+    }
+    double area(){
+        return this.width * this.breadth;
     }
 }
