@@ -5,6 +5,10 @@ public class Encapsulation{
         return x;
     }
 
+    void setX(int x){
+        this.x = x;
+    }
+
     public static void main(String[] args){
         Encapsulation e  = new Encapsulation();
         System.out.println(e.getX());
